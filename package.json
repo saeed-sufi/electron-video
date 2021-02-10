@@ -1,0 +1,14 @@
+{
+  "name": "videoapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saeed-Sufi <Sufi.geo@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^11.2.3"
+  }
+}
