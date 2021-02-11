@@ -17,10 +17,10 @@
 
 * In order to make your electron app more performant, consider applying the following rules: 
   * Bundle your code using webpack. `require` is an expensive operation. So, it's better to load only one js file.
- * Your app should be able to work offline. So, download everything you need for your app to run and include them in your app's bundle
- * Don't use polyfills. Electron has them all.
- * Use web workers and `requestidlecallback()` to avoid blocking the renderer process.
- * always prefer async modules. Avoid using synchronous IPC and `remote` module as much as possible. Make use of worker threads for CPU-heavy tasks.
- * load modules whenever you need them not at the top of your file. `require` comes with a module cache, so it runs faster next time it is called.
- * profiling the modules you use, is the best solution to improve your app performance. `node --cpu-prof --heap-prof -e "require('request')"`
+  * Your app should be able to work offline. So, download everything you need for your app to run and include them in your app's bundle
+  * Don't use polyfills. Electron has them all.
+  * Use web workers and `requestidlecallback()` to avoid blocking the renderer process.
+  * always prefer async modules. Avoid using synchronous IPC and `remote` module as much as possible. Make use of worker threads for CPU-heavy tasks.
+  * load modules whenever you need them not at the top of your file. `require` comes with a module cache, so it runs faster next time it is called.
+  * profiling the modules you use, is the best solution to improve your app performance. `node --cpu-prof --heap-prof -e "require('request')"`
  
