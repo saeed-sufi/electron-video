@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "electron": "electron ."
   },
   "author": "Saeed-Sufi <Sufi.geo@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "electron": "^11.2.3"
+    "electron": "^11.2.3",
+    "fluent-ffmpeg": "^2.1.2"
   }
 }
