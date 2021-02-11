@@ -16,7 +16,7 @@
 * In electron, whenever we close a window, we have to assign the window object to `null` so that the JS garbage collector would know that it can reclaim the memory which was occupied by the window. 
 
 * In order to make your electron app more performant, consider applying the following rules: 
- * Bundle your code using webpack. `require` is an expensive operation. So, it's better to load only one js file.
+  * Bundle your code using webpack. `require` is an expensive operation. So, it's better to load only one js file.
  * Your app should be able to work offline. So, download everything you need for your app to run and include them in your app's bundle
  * Don't use polyfills. Electron has them all.
  * Use web workers and `requestidlecallback()` to avoid blocking the renderer process.
