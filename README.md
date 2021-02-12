@@ -23,4 +23,13 @@
   * always prefer async modules. Avoid using synchronous IPC and `remote` module as much as possible. Make use of worker threads for CPU-heavy tasks.
   * load modules whenever you need them not at the top of your file. `require` comes with a module cache, so it runs faster next time it is called.
   * profiling the modules you use, is the best solution to improve your app performance. `node --cpu-prof --heap-prof -e "require('request')"`
+* The `super` keyword is a reference to the parent class constructor. So, it has to take care of the parent's constructor arguments.
+
+* If no variable is pointing toward the `new` instance of a class that you made, this new instance will be collected by the garbage collector. 
+
+* When the app window is not focused, chromium is going to assume that you dont care about your app and it starts to limit the resources used by the js on the app. This leads to your app starts throttling. In order to prevent such behaviour, we need o set `backgroundThrottling: false` in the `webPrefences` option of the BrowserWindow instance. 
+
+* In order for the application to keep running while developing, use `nodemon` by setting ` "dev": nodemon --exec electron . ` in the package.json file and then run `npm run dev` in the terminal.
+
+
  
