@@ -31,5 +31,20 @@
 
 * In order for the application to keep running while developing, use `nodemon` by setting ` "dev": nodemon --exec electron . ` in the package.json file and then run `npm run dev` in the terminal.
 
+* In order to set node environment and use it in your code to check if you are in devoloping mode or not, insert `"app": "set NODE_ENV=dev&& electron ."` in the `package.json` file.
 
- 
+* If a module downloaded from npm does not run in your electron app and your app craches, it's because this module is compiled for a different version of V8 engine which is installed by node. Electron comes with its own version of node runtime which might not be the same as the node runtime that is installed on the system. In order to solve this problem we need to first install `npm install --save-dev electron-rebuild` which is a command line tool and then run `electron-rebuild nameofmodule` in the command line. An awesome approach would be to add `"postinstall": "electron-rebuild"` in the package.json file so that after each `install` of a module, a `postinstall` will automatically run.
+
+* In order to debug node apps using chrome dev tools, run `node --inspect-brk=9229 index.js` in terminal. Then on a new chrome tab move to `chrome://inspect/`. You can chage the port from 9229 to any other number greater than 1023.
+
+* using `once` for listening to an event will discard the listener after the event is triggered for the first time.
+
+* To make a child window appear on the top of the main window for some seconds and then disappears, call `settimeout()` twice.
+
+* In the style.css of the windows, set `user-select:none` for the `body` element in order to prevent user being able to select text on the app window.
+
+* In order to make a frameless window draggable, set `webkit-app-region:drag` as an inline style.
+
+* Install `electron-window-state` to save and restore your app windows sizes. 
+
+
