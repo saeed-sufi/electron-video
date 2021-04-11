@@ -29,8 +29,8 @@
 
 
 * communications between `main` and `renderer` processes:
-![communications](https://github.com/saeed-sufi/electron-video/blob/master/ipcObjs.png)
 
+![communications](https://github.com/saeed-sufi/electron-video/blob/master/ipcObjs.png)
 * When the app window is not focused, chromium is going to assume that you dont care about your app and it starts to limit the resources used by the js on the app. This leads to your app starts throttling. In order to prevent such behaviour, we need o set `backgroundThrottling: false` in the `webPrefences` option of the BrowserWindow instance. 
 
 * In order for the application to keep running while developing, use `nodemon` by setting ` "dev": nodemon --exec electron . ` in the package.json file and then run `npm run dev` in the terminal.
