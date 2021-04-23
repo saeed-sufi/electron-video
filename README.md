@@ -3,6 +3,8 @@
 
 * `ffmpeg` is the most popular command line tool to work with video files. `fluent-ffmpeg` is the wrapper which makes it easier to work with `ffmpeg`.
 
+* Use following command to compress mp4 files which are playable in browsers. `ffmpeg -y -i "INPUT-FILE" -c:v libx265 -preset slow -crf 28 -pix_fmt yuv420p "OUTPUT-FILE"`
+
 * `app` object is responsible for runnig electron process on our machine.
 
 * whenever we need to make a menu, first we need to make a menu template. It's an object or an array which is the structure of the menu.
